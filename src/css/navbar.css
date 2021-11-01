@@ -1,0 +1,89 @@
+.navbar {
+    display: flex;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+    vertical-align: center;
+    font-family: "Damion";
+    font-size: 2rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2.5vw;
+    padding: 2.5vw;
+    font-size: 1.125rem;
+}
+
+@media (orientation: portrait) {
+
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger-open-btn {
+        align-self: flex-end;
+        height: 100%;
+        font-size: 1.5rem;
+        aspect-ratio: 1/1;
+        border: none;
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        top: 0;
+        left: -100vh;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        z-index: 2;
+    }
+
+        .hamburger-left {
+            position: relative;
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+            .hamburger-close-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 5vh;
+                aspect-ratio: 1/1;
+                color: white;
+                font-size: 2rem;
+            }
+
+        .hamburger-right {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5vh;
+            padding: 10vh 0;
+            background-color: #000000dd;
+        }
+
+            .hamburger-right a {
+                color: white;
+                font-size: 1.25rem;
+            }
+
+}
+
+@media (orientation: landscape) {
+
+    .hamburger-open-btn,
+    .hamburger-menu {
+        display: none;
+    }
+
+}

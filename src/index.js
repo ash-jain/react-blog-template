@@ -9,14 +9,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Route path="/" component={ Home } exact ></Route>
-      <Route path="/Home" component={ Home } exact ></Route>
-      <Route path="/articles" component={ Articles } exact ></Route>
-      <Route path="/about" component={ About } exact ></Route>
-      <Route path="/contact" component={ Contact } exact ></Route>
-    </BrowserRouter>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <BrowserRouter>
+            <Route path="/" component={ Home } exact ></Route>
+            <Route path="/home" component={ Home } exact ></Route>
+            <Route path="/articles" component={ Articles } exact ></Route>
+            <Route path="/about" component={ About } exact ></Route>
+            <Route path="/contact" component={ Contact } exact ></Route>
+        </BrowserRouter>
+    </React.StrictMode>,
   document.getElementById('root')
 );
