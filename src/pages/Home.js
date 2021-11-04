@@ -1,11 +1,9 @@
 import '../css/Home.css';
-import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 
 function App() {
   return (
       <>
-        <Navbar />
         <div className="homepage-container">
           <div className="homepage-left">
               <small>Hello I am,</small>
@@ -31,6 +29,6 @@ function App() {
         </div>
       </>
   );
-}
+};
 
 export default App;
