@@ -13,16 +13,16 @@ import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route path="/" component={ Home } exact />
-                <Route path="/articles" component={ Articles } exact />
-                <Route path="/about" component={ About } exact />
-                <Route path="/contact" component={ Contact } exact />
-                <Route component={ PageNotFound } />
-            </Switch>
-        </Router>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" component={ Home } exact />
+          <Route path="/articles" component={ Articles } exact />
+          <Route path="/about" component={ About } exact />
+          <Route path="/contact" component={ Contact } exact />
+          <Route component={ PageNotFound } />
+        </Switch>
+      </Router>
     </React.StrictMode>,
-  document.getElementById('root')
+    document.getElementById('root')
 );
