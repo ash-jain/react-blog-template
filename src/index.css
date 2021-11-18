@@ -1,4 +1,27 @@
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: local("Brandon Grotesque"), url(./fonts/brandon-grotesque.woff) format('woff');
+    src: local("Brandon Grotesque"), url(./fonts/brandon-grotesque.ttf) format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Source+Sans+Pro&family=Source+Code+Pro&display=swap');
+
 :root {
+    --foreground-primary: #0f172a;
+    --foreground-primary-reduced-opacity: #0f172acc;
+    --foreground-secondary: #151515;
+    --foreground-secondary-reduced-opacity: #151515aa;
+    --background-primary: #f5f5f5;
+    --background-primary-reduced-opacity: #fffc;
+    --background-secondary: #fff;
+    --background-secondary-reduced-opacity: #f5f5f5aa;
+    --linear-gradient: linear-gradient(to bottom right, #a02be4, #7c3aed, #4f46e5);
+    --accent-light: #a02be4;
+    --accent-dark: #4f46e5;
+
+    --primary-font: "Source Code Pro", monospace;
+    --secondary-font: "Source Sans Pro", sans-serif;
+    --title-font: "Brandon Grotesque", sans-serif;
+    --cursive-font: "Damion", cursive;
 }
 
 * {
@@ -20,6 +43,8 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--foreground-primary);
+    background: var(--background-primary);
 }
 
 code {
@@ -27,13 +52,7 @@ code {
         monospace;
 }
 
-@font-face {
-    font-family: "Brandon Grotesque";
-    src: local("Brandon Grotesque"), url(./fonts/brandon-grotesque.woff) format('woff');
-    src: local("Brandon Grotesque"), url(./fonts/brandon-grotesque.ttf) format('truetype');
-}
-@import url('https://fonts.googleapis.com/css2?family=Damion&family=Lora:wght@600&family=Source+Code+Pro&display=swap');
-
 a {
+    color: inherit;
     text-decoration: none;
 }

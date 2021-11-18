@@ -1,38 +1,43 @@
 .homepage-container {
     position: relative;
-    height: 95vh;
     width: 100%;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5vw;
+    color: var(--foreground-primary);
+    background-color: var(--background-primary);
+    font-family: var(--primary-font);
 }
 
 .homepage-container > .homepage-left,
 .homepage-container > .homepage-right {
-    margin-top: -10vh;
-    padding: 5vh 5vw 5vh 2.5vw;
+    margin-top: -20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .homepage-left {
-    display: flex;
-    flex-direction: column;
     gap: 2vh;
-    height: 45vh;
-    width: 30vw;
-    background: #0005;
+    width: 35vw;
 }
 
     .homepage-left > small {
-        color: #eee;
-        font-family: 'Source Code Pro', monospace;
         font-size: 1.5rem;
     }
 
     .homepage-left > big {
-        color: white;
-        font-family: 'Lora', serif;
-        font-size: 5rem;
+        font-family: var(--title-font);
+        font-size: 4rem;
         font-weight: bold;
+        background: var(--linear-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .homepage-left > nav {
@@ -43,62 +48,49 @@
     }
 
         .homepage-left i {
-            color: white;
+            color: var(--foreground-primary-reduced-opacity);
+        }
+        .homepage-left i:hover {
+            transform: scale(1.1);
         }
 
 .homepage-right {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 45vh;
+    gap: 20vh;
     width: 50vw;
-    background: #0008;
 }
 
     .homepage-right-text {
-        text-align: justify;
-        color: #eee;
         font-size: 1.25rem;
     }
 
-        .homepage-btn-container {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
+        .homepage-right-text a {
+            text-decoration: underline var(--foreground-primary);
         }
 
-            .homepage-btn {
-                display: block;
-                align-self: center;
-                text-align: center;
-                padding: 5px 2px;
-                min-width: 15vw;
-                color: white;
-                font-family: 'Brandon Grotesque';
-                font-size: 1.25rem;
-                background: linear-gradient(to top left, #F7971E44, #f8b50044);
-                border: 2px solid #eee;
-            }
+    .homepage-btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 10vw;
+        width: 100%;
+    }
 
-.homepage-background-img {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: url(https://ik.imagekit.io/ashtrospection/blog-template-stock-picture.jpg?updatedAt=1635766660790);
-    background-size: cover;
-    z-index: -1;
-}
+        .homepage-btn {
+            display: block;
+            align-self: center;
+            text-align: center;
+            padding: 5px 2px;
+            min-width: 15vw;
+            font-family: var(--title-font);
+            font-size: 1.25rem;
+            color: var(--background-secondary);
+            background: var(--linear-gradient);
+            border: 1px solid var(--foreground-primary);
+        }
+        .homepage-btn:hover {
+            opacity: 0.9;
+        }
 
-.homepage-background {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.2;
-    z-index: -1;
-}
 
 @media (orientation: portrait) {
 
@@ -114,8 +106,6 @@
         margin: 0;
         padding: 0;
         width: 90vw;
-        height: initial;
-        background: none;
     }
 
     .homepage-left {
@@ -123,52 +113,38 @@
     }
 
         .homepage-left > small {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         .homepage-left > big {
-            font-family: "Brandon Grotesque";
             font-size: 3rem;
             font-weight: lighter;
         }
 
         .homepage-left > nav {
-            gap: 5vw;
+            gap: 10vw;
             margin-top: 1vh;
             font-size: 2rem;
         }
 
     .homepage-right {
         gap: 5vh;
-        background: none;
     }
 
         .homepage-right-text {
-            font-size: 1rem;
-            font-family: 'Source Code Pro';
+            font-size: 1.1rem;
         }
 
     .homepage-btn-container {
-        display: flex;
         flex-direction: column;
-        gap: 5vh;
+        gap: 4vh;
     }
 
         .homepage-btn {
             height: 5vh;
-            width: 80%;
-            font-size: 1.25rem;
-            color: #fffc;
-            border: 1px solid white;
+            width: 75%;
+            font-size: 1.125rem;
             border-radius: 2px;
         }
-
-    .homepage-background-img {
-        background-position: center;
-    }
-
-    .homepage-background {
-        opacity: 0.5;
-    }
 
 }
