@@ -3,87 +3,128 @@
     height: 5vh;
     justify-content: space-between;
     align-items: center;
+    color: var(--foreground-secondary);
+    background-color: var(--background-secondary);
 }
 
 .logo {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 5vw;
+    gap: .25em;
+    padding: 0 2.5vw;
     vertical-align: center;
-    font-family: "Damion";
-    font-size: 2rem;
+    font-family: var(--cursive-font);
+    font-size: 1.75rem;
+    background: var(--linear-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+.logo:hover {
+    opacity: 0.8;
+}
+    .logo > span {
+        font-size: 2rem;
+    }
 
 .navbar-links {
     display: flex;
-    gap: 2.5vw;
-    padding: 2.5vw;
-    font-size: 1.125rem;
 }
 
-@media (orientation: portrait) {
 
-    .navbar-links {
-        display: none;
-    }
+@media (orientation: portrait) {
 
     .hamburger-open-btn {
         align-self: flex-end;
         height: 100%;
-        font-size: 1.5rem;
         aspect-ratio: 1/1;
+        color: var(--background-secondary);
+        background: var(--linear-gradient);
+        font-size: 1.5rem;
         border: none;
+        cursor: pointer;
     }
 
-    .hamburger-menu {
+    .navbar-links {
         position: fixed;
-        top: 0;
-        left: -100vh;
-        height: 100vh;
+        padding: 7.5vh 0 5vh;
+        height: 50vh;
         width: 100%;
-        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5vh;
+        font-family: var(--title-font);
+        color: var(--background-secondary);
+        background: var(--linear-gradient);
+        transition: all 0.3s ease-out;
         z-index: 2;
     }
+    .hamburger-open {
+        top: 0vh;
+    }
+    .hamburger-closed {
+        top: -50vh;
+    }
 
-        .hamburger-left {
-            position: relative;
-            width: 40%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-            .hamburger-close-btn {
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 5vh;
-                aspect-ratio: 1/1;
-                color: white;
-                font-size: 2rem;
-            }
-
-        .hamburger-right {
-            width: 60%;
+        .navbar-links > a {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2.5vh;
-            padding: 10vh 0;
-            background-color: #000000dd;
+            justify-content: center;
+            min-width: 33.33vw;
+            font-size: 1.5rem;
+            border-radius: 2.5px;
         }
 
-            .hamburger-right a {
-                color: white;
-                font-size: 1.25rem;
-            }
+        .nav-link-highlight {
+            color: var(--foreground-primary-reduced-opacity);
+            background: var(--background-secondary);
+        }
+
+    .hamburger-close-btn {
+        margin-top: auto;
+        height: 5vh;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        border: 2px solid var(--background-secondary);
+        border-radius: 50%;
+        cursor: pointer;
+    }
 
 }
+
 
 @media (orientation: landscape) {
 
     .hamburger-open-btn,
-    .hamburger-menu {
+    .hamburger-close-btn {
         display: none;
     }
+
+    .navbar-links {
+        height: 100%;
+        align-items: center;
+        gap: 0.5vw;
+        padding: 0 2.5vw;
+        font-family: var(--secondary-font);
+    }
+        .navbar-links > a {
+            padding: 0 1vw;
+            display: flex;
+            align-items: center;
+            height: 75%;
+            font-size: 1.125rem;
+            border-radius: 2.5px;
+        }
+        .navbar-links > a:hover {
+            opacity: 0.8;
+        }
+        .nav-link-highlight {
+            color: var(--background-secondary);
+            background: var(--linear-gradient);
+        }
 
 }
